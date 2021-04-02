@@ -6,6 +6,6 @@ const OrderForm = () => {
       <input type="text" />
     </form>
   );
-}
+};
 
 export default OrderForm;
