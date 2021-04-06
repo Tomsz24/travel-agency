@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 
 
 const OrderForm = props => {
-  const { tripCost } = props;
+  const { tripCost, options } = props;
   return (
     <Row>
       <Col xs={12}>
-        <OrderSummary tripCost={tripCost} />
+        <OrderSummary tripCost={tripCost} options={options} />
       </Col>
     </Row>
   );
@@ -17,6 +17,7 @@ const OrderForm = props => {
 
 OrderForm.propTypes = {
   tripCost: PropTypes.any,
+  options: PropTypes.object,
 };
 
 export default OrderForm;
