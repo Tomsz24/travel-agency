@@ -11,7 +11,6 @@ const OrderOptionDropdown = props => {
       value={currentValue}
       onChange={event => setOptionValue(event.currentTarget.value)}
     >
-      {console.log(props)}
       {required ? '' : (
         <option key='null' value=''>---</option>
       )}
