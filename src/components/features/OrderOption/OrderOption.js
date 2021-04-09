@@ -16,16 +16,6 @@ const optionTypes = {
   text: OrderOptionText,
 };
 
-// const OrderOption = props => {
-//   const { component, title } = styles;
-//   const { name } = props;
-//   return (
-//     <div className={component}>
-//       <h3 className={title}>{name}</h3>
-//     </div>
-//   );
-// }
-
 const OrderOption = ({ name, type, id, setOrderOption, ...otherProps }) => {
   const OptionComponent = optionTypes[type];
   if (!OptionComponent) {
