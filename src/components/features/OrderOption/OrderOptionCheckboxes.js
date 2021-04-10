@@ -15,11 +15,10 @@ const newValueSet = (currentValue, id, checked) => {
 };
 
 const OrderOptionCheckboxes = props => {
-  const { chckboxes } = styles;
+  const { checkboxes } = styles;
   const { values, currentValue, setOptionValue } = props;
   return (
-    <div className={chckboxes}>
-      {console.log(props)}
+    <div className={checkboxes}>
       {values.map(value => (
         <label htmlFor="" key={value.id}>
           <input type="checkbox" value={value.id} checked={currentValue.includes(`${value.id}`) ? true : false} onChange={event => setOptionValue(newValueSet(currentValue, value.id, event.currentTarget.checked))} />

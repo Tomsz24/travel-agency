@@ -6,8 +6,8 @@ import { formatPrice } from '../../../utils/formatPrice';
 
 const OrderOptionIcons = props => {
 
-  const { values, setOptionValue, required } = props;
-  const { component, icon } = styles;
+  const { values, setOptionValue, required, currentValue } = props;
+  const { component, icon, iconActive } = styles;
 
   return (
     <div className={component}>
@@ -17,7 +17,7 @@ const OrderOptionIcons = props => {
         </div>
       )}
       {values.map(value => (
-        <div className={icon} key={value.id} onClick={() => setOptionValue(value.id)}>
+        <div className={value.id === currentValue ? iconActive : icon} key={value.id} onClick={() => setOptionValue(value.id)}>
           <Icon name={value.icon} />{value.name} {formatPrice(value.price)}
         </div>
       ))}
@@ -29,6 +29,7 @@ OrderOptionIcons.propTypes = {
   values: PropTypes.array,
   setOptionValue: PropTypes.func,
   required: PropTypes.any,
+  currentValue: PropTypes.string,
 };
 
 export default OrderOptionIcons;
