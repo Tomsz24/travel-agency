@@ -1,0 +1,21 @@
+{
+  "orders": [
+    {
+      "car-rental": "full",
+      "accommodation": "suite",
+      "features": [
+        "all-inclusive"
+      ],
+      "adults": "2",
+      "children": 0,
+      "name": "Tomii",
+      "contact": "512251253",
+      "start-date": "2021-04-14T22:00:00.000Z",
+      "totalCost": "$104,362",
+      "tripName": "Pleasant travel in cool Turkey",
+      "tripId": "5cc1d10130dfa407e2e54e20",
+      "countryId": "TUR",
+      "id": 1
+    }
+  ]
+}
