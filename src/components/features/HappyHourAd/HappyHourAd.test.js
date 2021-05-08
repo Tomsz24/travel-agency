@@ -77,15 +77,15 @@ const checkDescriptionAfterTime = (time, delaySeconds, expectedDescription) => {
 };
 
 describe('Component HappyHourAd with mocked Date', () => {
-  checkDescriptionAtTime('11:57:58', '122');
-  checkDescriptionAtTime('11:59:59', '1');
-  checkDescriptionAtTime('13:00:00', 23 * 60 * 60 + '');
+  checkDescriptionAtTime('11:57:58', '00:02:02');
+  checkDescriptionAtTime('11:59:59', '00:00:01');
+  checkDescriptionAtTime('13:00:00', '23:00:00');
 });
 
 describe('Component HappyHourAd with mocked Date and delay', () => {
-  checkDescriptionAfterTime('11:57:58', 2, '120');
-  checkDescriptionAfterTime('11:59:58', 1, '1');
-  checkDescriptionAfterTime('13:00:00', 60 * 60, 22 * 60 * 60 + '');
+  checkDescriptionAfterTime('11:57:58', 2, '00:02:00');
+  checkDescriptionAfterTime('11:59:58', 1, '00:00:01');
+  checkDescriptionAfterTime('13:00:00', 60 * 60, '22:00:00');
 });
 
 describe('Component HappyHourAd shows promoDesription within HappyHour', () => {
@@ -95,7 +95,7 @@ describe('Component HappyHourAd shows promoDesription within HappyHour', () => {
 });
 
 describe('Component HappyHourAd with mocked Date and delay just before HappyHour', () => {
-  checkDescriptionAfterTime('11:57:58', 2, '120');
-  checkDescriptionAfterTime('11:59:58', 1, '1');
+  checkDescriptionAfterTime('11:57:58', 2, '00:02:00');
+  checkDescriptionAfterTime('11:59:58', 1, '00:00:01');
   checkDescriptionAfterTime('11:59:58', 2, mockProps.promoDescription);
 });
