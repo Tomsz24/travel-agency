@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './HappyHourAd.scss';
+import { formatTime } from '../../../utils/formatTime';
 
 class HappyHourAd extends React.Component {
   constructor() {
@@ -24,7 +25,7 @@ class HappyHourAd extends React.Component {
     return (
       <div className={styles.component}>
         <h3 className={styles.title}>HAPPY HOURS</h3>
-        <div className={styles.promoDescription}>{promo > 23 * 60 * 60 ? 'It is your time' : promo}</div>
+        <div className={styles.promoDescription}>{promo > 23 * 60 * 60 ? 'It is your time' : formatTime(promo)}</div>
       </div>
     );
   }
